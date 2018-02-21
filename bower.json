@@ -16,5 +16,8 @@
   },
   "resolutions": {
     "bootstrap": "3.3.7"
-  }
+  },
+  "authors": [
+    "ZEvans1 <zte.zachary@gmail.com>"
+  ]
 }
