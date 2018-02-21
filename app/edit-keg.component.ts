@@ -11,6 +11,12 @@ import { Keg } from './keg.model';
         <h5>Edit Keg Details</h5>
         <label>Edit Keg Name</label>
         <input [(ngModel)]="childSelectedKeg.name">
+        <label>Edit Keg Brand</label>
+        <input [(ngModel)]="childSelectedKeg.brand">
+        <label>Edit Keg Price</label>
+        <input [(ngModel)]="childSelectedKeg.price">
+        <label>Edit Keg Flavor</label>
+        <input [(ngModel)]="childSelectedKeg.flavor">
         <button (click)="doneButtonClicked()">Done</button>
       </div>
     </div>
