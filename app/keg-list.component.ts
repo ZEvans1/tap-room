@@ -11,7 +11,7 @@ import { Keg } from './keg.model';
     </select>
 
     <ul>
-      <li *ngFor="let currentKeg of childKegList | volume:filterByVolume">{{currentKeg.name}}, {{currentKeg.brand}}, {{currentKeg.price}}, {{currentKeg.flavor}}, {{currentKeg.kegAmount}} pints available <button (click)="consumeButtonHasBeenClicked(currentKeg)">Consume a pint</button> <button (click)="editButtonHasBeenClicked(currentKeg)">Edit keg</button> </li>
+      <li [class]="priceColor(currentKeg)" *ngFor="let currentKeg of childKegList | volume:filterByVolume">{{currentKeg.name}}, {{currentKeg.brand}}, $ {{currentKeg.price}}/pint, {{currentKeg.flavor}}, {{currentKeg.kegAmount}} pints available <button (click)="consumeButtonHasBeenClicked(currentKeg)">Consume a pint</button> <button (click)="editButtonHasBeenClicked(currentKeg)">Edit keg</button> </li>
     </ul>
   `
 })
@@ -21,6 +21,16 @@ export class KegListComponent {
   @Output() clickSender = new EventEmitter();
 
   filterByVolume: string = "allKegs";
+
+  priceColor(currentKeg){
+    if (currentKeg.price > 5){
+      return "bg-danger;"
+    } else if (currentKeg.price <=5 && currentKeg.price > 2) {
+      return "bg-warning";
+    } else {
+      return "bg-info";
+    }
+  }
 
   onChange(optionFromMenu) {
     this.filterByVolume = optionFromMenu;
