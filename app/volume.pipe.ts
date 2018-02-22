@@ -19,7 +19,7 @@ export class VolumePipe implements PipeTransform {
       return output;
     } else if(specifiedVolume === "emptyKegs") {
       for (var i = 0; i < input.length; i++) {
-        if (input[i].kegAmount < 10) {
+        if (input[i].kegAmount <= 10) {
           output.push(input[i]);
         }
       }
