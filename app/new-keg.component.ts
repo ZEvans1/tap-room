@@ -5,23 +5,24 @@ import { Keg } from './keg.model';
   selector: 'new-keg',
   template: `
     <h2>Add a new keg</h2>
-      <div>
+      <div class="kombucha-form">
         <label>Kombucha Name</label>
         <input #newName>
       </div>
-      <div>
+      <div class="kombucha-form">
         <label>Kombucha Brand</label>
         <input #newBrand>
       </div>
-      <div>
+      <div class="kombucha-form">
         <label>Kombucha Price</label>
         <input #newPrice>
       </div>
-      <div>
+      <div class="kombucha-form">
         <label>Kombucha Flavor</label>
         <input #newFlavor>
+        <br>
+        <button class="kombucha-form" (click)="submitForm(newName.value, newBrand.value, newPrice.value, newFlavor.value); newName.value=''; newBrand.value=''; newPrice.value=''; newFlavor.value='';">Add keg</button>
       </div>
-      <button (click)="submitForm(newName.value, newBrand.value, newPrice.value, newFlavor.value); newName.value=''; newBrand.value=''; newPrice.value=''; newFlavor.value='';">Add keg</button>
   `
 })
 

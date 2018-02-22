@@ -11,7 +11,7 @@ import { Keg } from './keg.model';
     </select>
 
     <ul>
-      <li [class]="priceColor(currentKeg)" *ngFor="let currentKeg of childKegList | volume:filterByVolume">{{currentKeg.name}}, {{currentKeg.brand}}, $ {{currentKeg.price}}/pint, {{currentKeg.flavor}}, {{currentKeg.kegAmount}} pints available <button (click)="consumeButtonHasBeenClicked(currentKeg)">Consume a pint</button> <button (click)="editButtonHasBeenClicked(currentKeg)">Edit keg</button> </li>
+      <li *ngFor="let currentKeg of childKegList | volume:filterByVolume">{{currentKeg.name}}, {{currentKeg.brand}}, <span [class]="priceColor(currentKeg)">$ {{currentKeg.price}}/pint</span>, {{currentKeg.flavor}}, {{currentKeg.kegAmount}} pints available <button (click)="consumeButtonHasBeenClicked(currentKeg)">Consume a pint</button> <button (click)="editButtonHasBeenClicked(currentKeg)">Edit keg</button> </li>
     </ul>
   `
 })
@@ -24,7 +24,7 @@ export class KegListComponent {
 
   priceColor(currentKeg){
     if (currentKeg.price > 5){
-      return "bg-danger;"
+      return "bg-danger";
     } else if (currentKeg.price <=5 && currentKeg.price > 2) {
       return "bg-warning";
     } else {

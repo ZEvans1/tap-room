@@ -1,3 +1,9 @@
-As a patron, I want to have kegs prices color-coded for easy readability. Perhaps based on their price (greater or less than $5 per pint, perhaps) or the particular style of beer or kombucha.
+As an employee, I want to be able to click a button next to a keg whenever I sell a growler of it. Many growlers are 32 ounces, so this should decrease the number of pints left by 2.
 
-As a patron, I want to use the alcohol content property to display stronger beers differently than weaker beers.
+As an employee, I want to be able to click a button next to a keg whenever I sell a large growler. While most growlers are 32 ounces, some are 64. I'll need to select the appropriate growler size and correctly decrease the remaining number of pints left.
+
+As a patron, I want to filter the available kegs by style or flavor of beer and/or kombucha.
+
+As an employee, I want to select an option to put a certain keg on sale. This would lower the cost by a percentage of my choosing, and perhaps change a keg's appearance in the list to draw customers' attention to it.
+
+As an employee, I might want to program a "happy hour" option I can select to put all kegs on sale.
