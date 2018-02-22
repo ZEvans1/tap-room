@@ -21,7 +21,7 @@ import { Keg } from './keg.model';
         <label>Kombucha Flavor</label>
         <input #newFlavor>
         <br>
-        <button class="kombucha-form" (click)="submitForm(newName.value, newBrand.value, newPrice.value, newFlavor.value); newName.value=''; newBrand.value=''; newPrice.value=''; newFlavor.value='';">Add keg</button>
+        <button class="kombucha-form btn btn-outline-secondary" (click)="submitForm(newName.value, newBrand.value, newPrice.value, newFlavor.value); newName.value=''; newBrand.value=''; newPrice.value=''; newFlavor.value='';">Add keg</button>
       </div>
   `
 })

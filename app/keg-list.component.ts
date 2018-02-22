@@ -55,8 +55,10 @@ export class KegListComponent {
   growlerButtonHasBeenClicked(kegToConsume: Keg) {
     if (kegToConsume.kegAmount > 1) {
       kegToConsume.kegAmount -=2;
-    } else {
+    } else if (kegToConsume.kegAmount === 1) {
       alert('Not enough for a growler. How about a pint?');
+    } else {
+      alert('Keg is empty. Can not consume. ');
     }
   }
 }
