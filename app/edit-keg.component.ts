@@ -4,10 +4,9 @@ import { Keg } from './keg.model';
 @Component({
   selector: 'edit-keg',
   template: `
-    <div>
+    <div class="edit-form">
       <div *ngIf="childSelectedKeg">
         <h4>{{childSelectedKeg.name}}</h4>
-        <hr>
         <h5>Edit Keg Details</h5>
         <label>Edit Keg Name</label>
         <input [(ngModel)]="childSelectedKeg.name">
@@ -22,6 +21,7 @@ import { Keg } from './keg.model';
         <input [(ngModel)]="childSelectedKeg.flavor">
         <br>
         <button (click)="doneButtonClicked()">Done editing</button>
+        <hr>
       </div>
     </div>
   `
